@@ -1,0 +1,277 @@
+.prestations-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100%;
+}
+
+.prestations-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.prestation-title {
+  color: rgb(199, 199, 76);
+  text-align: center;
+  margin-top: 30px;
+  font-size: 50px;
+  font-family: "Goudy Old Style", sans-serif;
+  margin-bottom: 50px;
+}
+
+.flex_tel_presentations {
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+h2 {
+  margin-top: 05px;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.grid_presentations {
+  font-size: 15px;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.mariage,
+.entreprise,
+.anniv,
+.asso,
+.retraite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid red;
+  background: white;
+  color: black;
+  border-radius: 15px;
+  box-shadow: 12px 12px 2px 1px rgba(255, 0, 0, 0.4);
+  width: 310px;
+  height: 206px;
+}
+
+.mariage_img,
+.entreprise_img,
+.anniv_img,
+.asso_img,
+.retraite_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid red;
+  border-radius: 15px;
+  width: 310px;
+  height: 206px;
+  animation: rotation 2s linear;
+}
+
+@keyframes rotation {
+  from {
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+.mariage1_img,
+.entreprise1_img,
+.anniv1_img,
+.asso1_img,
+.retraite1_img {
+  width: 308px;
+  height: 203px;
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 750px) {
+  .grid_presentations {
+    font-size: 19px;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+
+  .mariage,
+  .entreprise,
+  .anniv,
+  .asso,
+  .retraite {
+    width: 350px;
+    height: 246px;
+  }
+
+  .mariage_img,
+  .entreprise_img,
+  .anniv_img,
+  .asso_img,
+  .retraite_img {
+    width: 350px;
+    height: 246px;
+  }
+
+  .mariage1_img,
+  .entreprise1_img,
+  .anniv1_img,
+  .asso1_img,
+  .retraite1_img {
+    width: 348px;
+    height: 243px;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .grid_pc_presentations {
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 450px);
+    grid-template-rows: repeat(5, 340px);
+    gap: 30px;
+    margin: 100px auto;
+    justify-content: center;
+  }
+
+  .prestation-title {
+    font-size: 60px;
+    margin-top: 0px;
+  }
+
+  h2 {
+    margin-top: 15px;
+  }
+
+  .grid_presentations {
+    margin-top: 10px;
+    font-size: 25px;
+  }
+
+  .mariage {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    border: 3px solid red;
+    background: white;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 12px 12px 2px 1px rgba(255, 0, 0, 0.4);
+  }
+
+  .mariage_img {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    border: 3px solid red;
+    border-radius: 15px;
+  }
+
+  .entreprise {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    border: 3px solid red;
+    background: white;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 12px 12px 2px 1px rgba(255, 0, 0, 0.4);
+  }
+
+  .entreprise_img {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    border: 3px solid red;
+    border-radius: 15px;
+  }
+
+  .anniv {
+    grid-column: 1 / 2;
+    grid-row: 3/4;
+    border: 3px solid red;
+    background: white;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 12px 12px 2px 1px rgba(255, 0, 0, 0.4);
+  }
+
+  .anniv_img {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    border: 3px solid red;
+    border-radius: 15px;
+  }
+
+  .asso {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    border: 3px solid red;
+    background: white;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 12px 12px 2px 1px rgba(255, 0, 0, 0.4);
+  }
+
+  .asso_img {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    border: 3px solid red;
+    border-radius: 15px;
+  }
+
+  .retraite {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+    border: 3px solid red;
+    background: white;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 12px 12px 2px 1px rgba(255, 0, 0, 0.4);
+  }
+
+  .retraite_img {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+    border: 3px solid red;
+    border-radius: 15px;
+  }
+
+  .mariage,
+  .entreprise,
+  .anniv,
+  .asso,
+  .retraite {
+    width: 450px;
+    height: 340px;
+  }
+
+  .mariage_img,
+  .entreprise_img,
+  .anniv_img,
+  .asso_img,
+  .retraite_img {
+    width: 450px;
+    height: 340px;
+  }
+
+  .mariage1_img,
+  .entreprise1_img,
+  .anniv1_img,
+  .asso1_img,
+  .retraite1_img {
+    width: 447px;
+    height: 337px;
+  }
+}

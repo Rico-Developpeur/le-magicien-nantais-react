@@ -1,0 +1,218 @@
+.header-container {
+  width: 100vw;
+  margin-top: 0;
+}
+
+.video {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.header-menu {
+  overflow: hidden;
+  border-top: 3px solid red;
+  margin-top: 0;
+}
+
+.slider {
+  position: fixed;
+  min-width: 100%;
+  height: 100%;
+  top: -120%;
+  background-color: gray;
+  z-index: 2;
+}
+
+.slider.active {
+  top: 0%;
+  animation-duration: 1.5s;
+  animation-name: slideIn;
+  animation-direction: normal;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    margin-left: 100%;
+    width: 100%;
+  }
+
+  to {
+    opacity: 1;
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.closed,
+.logo,
+.accueil,
+.presta,
+.spect,
+.contact,
+.galerie,
+.atelier {
+  height: 3%;
+}
+
+.slider ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding-bottom: 150px;
+}
+
+.slider ul li {
+  margin-block: 1.5rem;
+  list-style: none;
+  transition-property: transform;
+  transition-duration: 600ms;
+}
+
+li:hover {
+  transform: scale(1.3);
+}
+
+.slider ul li a {
+  font-size: 40px;
+  text-decoration: none;
+  color: red;
+}
+
+.menu-icon {
+  padding-left: 10px;
+}
+
+.menu-icon .menu {
+  display: block;
+  color: red;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.closed {
+  display: flex;
+  cursor: pointer;
+  color: red;
+  justify-content: flex-start;
+  width: 100%;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.closed .closes {
+  font-size: 40px;
+  border: 3px solid red;
+  border-radius: 30px;
+  background: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoImagix {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  border: solid 3px black;
+}
+
+@media screen and (min-width: 1140px) {
+  .header-container {
+    margin-bottom: -50px;
+  }
+
+  .video {
+    object-fit: fill;
+    width: 100%;
+    height: 60%;
+  }
+
+  .slider {
+    position: static;
+    min-width: 0%;
+    height: auto;
+    top: auto;
+    background-color: transparent;
+    background-image: url("../../assets/images/bandeau.png");
+    background-repeat: repeat-x;
+    border-bottom: 3px solid red;
+    padding: 0px 70px;
+  }
+
+  .slider.active {
+    top: auto;
+    animation-duration: 0s;
+    animation-name: none;
+  }
+
+  .slider ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding-bottom: 0;
+  }
+
+  .slider ul li {
+    margin-block: 0rem;
+    margin-inline: 0rem;
+    list-style: none;
+    margin-top: 50px;
+  }
+
+  .logo {
+    transition-property: all;
+    transition-duration: 0;
+  }
+
+  .logo:hover {
+    transform: none;
+  }
+
+  .slider ul li a {
+    font-size: 35px;
+    height: 40px;
+  }
+
+  .logoImagix {
+    position: absolute;
+    z-index: 2;
+  }
+
+  .menu-icon {
+    padding-left: 0px;
+  }
+
+  .menu-icon .menu {
+    display: none;
+    color: red;
+    font-size: 0px;
+    cursor: pointer;
+  }
+
+  .closed {
+    display: none;
+    cursor: pointer;
+    color: red;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+  .closed .closes {
+    font-size: 40px;
+    border: 3px solid red;
+    border-radius: 30px;
+    background: white;
+  }
+}

@@ -1,0 +1,111 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100%;
+  margin-bottom: 50px;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 130%;
+}
+
+.titre-home {
+  margin-top: 30px;
+}
+
+.homeTypewriter {
+  color: rgb(199, 199, 76);
+  text-align: center;
+  margin-top: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Goudy Old Style", sans-serif;
+}
+
+.parchemin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/images/parchemin.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.olivier {
+  width: 70%;
+  font-family: "Quite Magical", sans-serif;
+  font-size: 16px;
+  text-indent: 30px;
+}
+
+.olivier2 {
+  float: right;
+  padding-right: 30px;
+}
+
+@media screen and (min-width: 500px) {
+  .titre-home {
+    margin-top: 40px;
+  }
+
+  .homeTypewriter {
+    font-size: 21px;
+  }
+
+  .parchemin {
+    margin-top: 40px;
+  }
+
+  .olivier {
+    width: 68%;
+    font-size: 19px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .homeTypewriter {
+    font-size: 27px;
+  }
+
+  .parchemin {
+    margin-top: 60px;
+  }
+
+  .olivier {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .titre-home {
+    margin-top: 0px;
+  }
+
+  .homeTypewriter {
+    font-size: 40px;
+  }
+
+  .parchemin {
+    width: 85%;
+    height: 100%;
+    margin-top: 100px;
+  }
+
+  .olivier {
+    width: 65%;
+    font-size: 25px;
+    text-indent: 40px;
+  }
+}

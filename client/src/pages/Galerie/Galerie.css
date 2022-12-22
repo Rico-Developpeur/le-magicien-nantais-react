@@ -1,0 +1,148 @@
+.galerie-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100%;
+}
+
+.galerie-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.header-cont {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.galerie-title {
+  color: rgb(199, 199, 76);
+  text-align: center;
+  margin-top: 30px;
+  font-size: 50px;
+  font-family: "Goudy Old Style", sans-serif;
+  margin-bottom: 35px;
+}
+
+.container {
+  position: relative;
+  width: 320px;
+  margin: 0px auto 0 auto;
+  perspective: 1000px;
+}
+
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotate360 60s infinite forwards linear;
+}
+
+.carousel__face {
+  position: absolute;
+  width: 180px;
+  height: 140px;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+
+.carousel__face:nth-child(1) {
+  background-image: url("../../assets/images/mariage.jpg");
+  transform: rotateY(0deg) translateZ(430px);
+}
+.carousel__face:nth-child(2) {
+  background-image: url("../../assets/images/salon.jpg");
+  transform: rotateY(40deg) translateZ(430px);
+}
+.carousel__face:nth-child(3) {
+  background-image: url("../../assets/images/scene1.png");
+  transform: rotateY(80deg) translateZ(430px);
+}
+.carousel__face:nth-child(4) {
+  background-image: url("../../assets/images/maison_retraite1.jpg");
+  transform: rotateY(120deg) translateZ(430px);
+}
+.carousel__face:nth-child(5) {
+  background-image: url("../../assets/images/asso1.jpg");
+  transform: rotateY(160deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(6) {
+  background-image: url("../../assets/images/mariageBierepng.png");
+  transform: rotateY(200deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(7) {
+  background-image: url("../../assets/images/close_up.png");
+  transform: rotateY(240deg) translateZ(430px);
+}
+.carousel__face:nth-child(8) {
+  background-image: url("../../assets/images/entreprise.png");
+  transform: rotateY(280deg) translateZ(430px);
+}
+.carousel__face:nth-child(9) {
+  background-image: url("../../assets/images/digitale.jpg");
+  transform: rotateY(320deg) translateZ(430px);
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+.logo2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagix2 {
+  width: 130px;
+  height: 130px;
+  border-radius: 130px;
+  border: solid 3px black;
+  margin-top: 400px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1140px) {
+  .galerie-title {
+    font-size: 60px;
+    margin-top: 0px;
+  }
+
+  .container {
+    margin: 100px auto 0 auto;
+  }
+
+  .carousel__face {
+    width: 300px;
+    height: 227px;
+  }
+
+  .imagix2 {
+    width: 260px;
+    height: 260px;
+    margin-top: 590px;
+    margin-bottom: 80px;
+  }
+}
